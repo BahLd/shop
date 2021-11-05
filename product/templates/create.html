@@ -4,8 +4,8 @@
 
     <h1>Create product</h1>
     <form method="post" enctype="multipart/form-data">
-        {{product_form.as_p}}
-        {%csrf_token%}
+        {{form.as_p}}
+        {%csrf_token%}  
         <button type="submit" class="btn btn-success">Create</button>
     </form>
 

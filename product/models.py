@@ -1,4 +1,4 @@
-from functools import update_wrapper
+
 from django.db import models
 
 # Create your models here.
@@ -21,6 +21,11 @@ class Product(models.Model):
         ('out of stock', 'нет в наличии'),
         ('awaiting', 'ожидается')
     )
+
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('detail', kwargs={'product_id':self.pk})
+
 
     def __str__(self):
         return self.name

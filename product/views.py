@@ -5,18 +5,18 @@ from .models import *
 
 # Create your views here.
 
-def home_page(request):
-    categories = Category.objects.all()
-    return render(request, 'home.html', locals())
+# def home_page(request):
+#     categories = Category.objects.all()
+#     return render(request, 'home.html', locals())
 
-def product_list(request, slug):
-    products = Product.objects.filter(category__slug=slug)
-    return render(request, 'product_list.html', locals())
+# def product_list(request, slug):
+#     products = Product.objects.filter(category__slug=slug)
+#     return render(request, 'product_list.html', locals())
 
-def product_detail(request, product_id):
-    # product = Product.objects.get(id=product_id)
-    product = get_object_or_404(Product, pk = product_id)
-    return render(request, 'detail.html', locals())
+# def product_detail(request, product_id):
+#     # product = Product.objects.get(id=product_id)
+#     product = get_object_or_404(Product, pk = product_id)
+#     return render(request, 'detail.html', locals())
 
 def product_create(request):
     if request.method == 'POST':
