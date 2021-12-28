@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pyshop_db',
-        'USER': 'neu',
+        'NAME': 'shop',
+        'USER': 'baiaman',
         'PASSWORD' : '1',
         'HOST' : 'localhost',
         'PORT' : 5432
